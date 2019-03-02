@@ -2,6 +2,7 @@
 {
     margin: 0;
     padding: 0;
+    border: 0;
 }
 :root
 {
@@ -112,7 +113,6 @@ ul.nav li img
     width: var(--width);
     left: var(--center);
     display: flex;
-    z-index: 2;
 
     background-color: #555; 
     background-color: var(--second-color);
@@ -138,7 +138,7 @@ ul.nav li img
     text-align: justify;
     word-wrap: break-word;
 }
-
+/******************* Contact CV *********************/
 .contactCV
 {
     position: relative;
@@ -197,5 +197,49 @@ ul.nav li img
     {
         width: var(--width);
         left: var(--center);
+    }
+}
+@media only screen and (max-width: 400px)
+{
+    :root
+    {
+        --width: 100vw;
+        --center: calc((100vw - var(--width))/2);
+    }
+    /************** Navigation Bar ***************/
+    .header-nav
+    {
+        position: absolute;
+
+    }
+    .header-nav ul
+    {
+        flex-wrap: unset;
+    }
+    .header-nav li.page
+    {
+        display: none;
+        flex: 0;
+    }
+    .header-nav li.icon
+    {
+        flex: 1;
+    }
+    /************** Banner *********************/
+    .header-banner
+    {
+        top: 5rem;
+        flex-direction: column;
+
+        margin-bottom: 7rem;
+    }
+    .header-banner .text
+    {
+        padding-bottom: 20px;
+    }
+    /*************** Aside *******************/
+    .contactCV
+    {
+
     }
 }
