@@ -154,6 +154,7 @@ ul.nav li img
 
     padding: 20px;
     box-shadow: 2px 2px 3px 0 var(--shadow-color);
+    box-sizing: border-box;
 }
 .contactCV h3
 {
@@ -186,6 +187,7 @@ ul.nav li img
     :root
     {
         --width: 80vw;
+        --center: calc((100vw - var(--width))/2);
     }
     .header-banner
     {
