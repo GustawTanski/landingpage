@@ -5,9 +5,14 @@
 }
 :root
 {
-    --border-color: #000;
-    --first-color: #801818;
-    --first-text-color: #f5f5dc;
+    --shadow-color: #333;
+    --first-color: #b33939;
+    --first-text-color: #f7f1e3;
+    --second-color: #d1ccc0;
+    --second-text-color: #333;
+    --helping-color: #2c2c54;
+    --width: 95vw;
+    --center: calc((100vw - var(--width))/2);
 }
 html
 {
@@ -22,30 +27,28 @@ header
     position: relative;
     width: 100vw;
 }
+header.bodyheader
+{
+    display: flex;
+}
 body::before
 {
     content: "";
     position: fixed;
     width: 100%;
     height: 100%;
-    background-image: url(https://picsum.photos/1600/900?image=0);
+    background-image: url(https://picsum.photos/1600/900?image=10);
     background-size: cover;
+    background-position: center;
     z-index: -1;
     
-} */
-.mmm
-{
-    width: auto;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
 }
 .bodyheader a
 {
     text-decoration: none;
     color: inherit;
 }
-/* ***************** Navigation Bar **************************8*/
+/* ***************** Navigation Bar ****************/
 
 .header-nav
 {
@@ -54,11 +57,14 @@ body::before
     z-index: 100;
     background: var(--first-color);
     color: var(--first-text-color);
-    box-shadow: 0px 2px 3px 0 #000;
+    box-shadow: 0px 2px 3px 0 var(--shadow-color);
     font-size: 1.2rem;
 }
 ul.nav
 {
+    position: relative;
+    width: var(--width);
+    left: var(--center);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -103,25 +109,91 @@ ul.nav li img
 {
     position: relative;
     top: 6rem;
+    width: var(--width);
+    left: var(--center);
     display: flex;
-    background-color: #555;
-    z-index: 2; 
-}
-.header-banner h1
-{
-    font-size: 2.2rem;
-}
-.header-banner p
-{
-    font-size: 0.8rem;
-    width: 50%;
-}
-.header-banner span.fline
-{
-    font-weight: 700;
-    font-size: 1.4rem;
-}
-.header-banner img
-{
+    z-index: 2;
 
+    background-color: #555; 
+    background-color: var(--second-color);
+    box-shadow: 2px 2px 3px 0 var(--shadow-color);
+    color: var(--second-text-color);
+
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 8rem;
+}
+
+.header-banner .fline
+{
+    font-size: 1.4rem
+}
+.header-banner strong
+{
+    color: var(--first-color);
+}
+.header-banner .text
+{
+    padding-right: 30px;
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+.contactCV
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: var(--width);
+    left: var(--center);
+
+    background-color: var(--second-color);
+    color: var(--second-text-color);
+
+    padding: 20px;
+    box-shadow: 2px 2px 3px 0 var(--shadow-color);
+}
+.contactCV h3
+{
+    margin-bottom: 15px;
+}
+.contactCV .buttons
+{
+    display: flex;
+    justify-content: center;
+}
+.contactCV .buttons a
+{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 4px 1px var(--shadow-color);
+}
+.contactCV .buttons a:hover
+{
+    background-color: var(--first-color);
+    color: var(--first-text-color);
+    border-color: var(--helping-color);
+    box-shadow: 2px 2px 4px 1px var(--helping-color);
+}
+@media only screen and (min-width: 1000px)
+{
+    :root
+    {
+        --width: 80vw;
+    }
+    .header-banner
+    {
+        border-radius: 5px;
+    }
+    ul.nav
+    {
+        width: var(--width);
+        left: var(--center);
+    }
 }
