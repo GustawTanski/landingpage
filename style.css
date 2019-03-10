@@ -1,255 +1,286 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
 :root
 {
-    --shadow-color: #333;
-    --first-color: #b33939;
-    --first-text-color: #f7f1e3;
-    --second-color: #d1ccc0;
-    --second-text-color: #333;
-    --helping-color: #2c2c54;
-    --width: 95vw;
-    --center: calc((100vw - var(--width))/2);
+    --secondColor: #000;
+    --firstColor: #030917;
+    --thirdColor: #081525;
+    --fourthColor: #0E1E2E;
+    --fifthColor: #202D3F;
+    --firstTextColor: #fff;
+    --secondTextColor: #4169E1;
+    --bodyPadding: 10vw;
+    --imgShift: 10vw;
 }
-html
+
+*
 {
-    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
 body
 {
-    font-family: Roboto, Arial, sans-serif;
+   background-color: var(--firstColor);
+   color: var(--firstTextColor);
+   font-family: Roboto, Helvetica, sans-serif;
+   padding: 0 var(--bodyPadding);
 }
-header.bodyheader
-{
-    position: relative;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    padding-top: 6rem;
-    padding-bottom: 3rem;
-    align-items: center;
 
-}
-body::before
+body a
 {
-    content: "";
-    position: fixed;
-    width: 100%;
+    color: inherit;
+    text-decoration: unset;
+}
+/* div
+{
+    border: 1px red solid;
+    box-sizing: border-box;
+} */
+
+/******Header*********/
+
+.bodyHeader
+{
+    display: flex;
+    flex-direction: column;   
+    position: relative;
+    padding-bottom: 100px;
+}
+.bodyHeader .backgrounder
+{
+    position: absolute;
+    transform: translateX(calc(0vw - var(--bodyPadding)));
     height: 100%;
-    background-image: url(https://picsum.photos/1920/1080?image=10);
+    width: calc(100% + 2*var(--bodyPadding));
+    background-image: url(https://picsum.photos/1080/720/?image=800);
     background-size: cover;
-    background-position: center;
+    box-sizing: border-box;
+    display: flex;
     z-index: -1;
+}
+.bodyHeader .backgrounder .first
+{
+    background-color: var(--fifthColor);
+    opacity: 0.8;
+    width: calc(100vw - 2*var(--bodyPadding) - var(--imgShift));
     
 }
-.bodyheader a
+.bodyHeader .backgrounder .second
 {
-    text-decoration: none;
-    color: inherit;
+    background-color: var(--firstColor);
+    opacity: 0.8;
+    width:  calc(2* var(--bodyPadding) + var(--imgShift));
 }
-/* ***************** Navigation Bar ****************/
 
-.header-nav
+
+.headerNav ul
 {
-    top:0;
-    width: 100vw;
-    position: fixed;
-    z-index: 100;
-    background: var(--first-color);
-    color: var(--first-text-color);
-    box-shadow: 0px 2px 3px 0 var(--shadow-color);
-    font-size: 1.2rem;
-}
-ul.nav
-{
-    position: relative;
-    width: var(--width);
-    left: var(--center);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-end;
+    align-items: center;
     list-style: none;
+    width: 100%;
     box-sizing: border-box;
+    padding: 2em 0;
 }
-ul.nav li a
+
+.headerNav li
 {
-    display: block;
-    padding: 5px 10px;
+    padding: 0.5em;
+    margin: auto 10px;
     box-sizing: border-box;
-    border: 2px solid transparent;
     text-align: center;
-    height: 100%;
+    font-weight: 700;
 }
-ul.nav li a:hover
+
+.headerBanner
 {
-    background-color: var(--first-text-color);
-    color: var(--first-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10vh 0;
 }
-ul.nav li.icon
-{
-    flex: 1;
-}
-ul.nav li.page
-{
-    flex: 3;
-}
-ul.nav li.page a
+
+.headerBanner div.text
 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-} 
-ul.nav li img
-{
-    width: 25px;
-    padding-top: 5px;
+    align-items: flex-start;
 }
-/************** Banner  *************/
-.header-banner
+.headerBanner h1
 {
-    width: var(--width);
-    display: flex;
-
-    background-color: #555; 
-    background-color: var(--second-color);
-    box-shadow: 2px 2px 3px 0 var(--shadow-color);
-    color: var(--second-text-color);
-
-    padding: 20px;
-    box-sizing: border-box;
+    font-size: 5em;
+    margin-bottom: 4.5vh;
 }
 
-.header-banner .fline
+.headerBanner p
 {
-    font-size: 1.4rem
-}
-.header-banner strong
-{
-    color: var(--first-color);
-}
-.header-banner .text
-{
-    padding-right: 30px;
-    text-align: justify;
     word-wrap: break-word;
+    width: 50%;
 }
-/******************* Contact CV *********************/
+
+.headerBanner img
+{
+    min-width: 150px;       //być do zmiany
+    max-width: 17vw;
+    height: auto; 
+    top: unset;
+    right: 0;
+    position: absolute;
+    transform: translateX(calc(0vw - var(--imgShift)));
+    border-radius: 50%;
+}
+
+/********* CVAside **************/
+.contactCV, .portfolio figcaption, .elementContainer
+{
+    background-color: var(--secondColor);
+    box-shadow: 4px 4px 3px 0 rgba(0,0,0,0.5);
+}
+
+
 .contactCV
 {
-    position: relative;
+    margin: 30px calc(0vw - var(--bodyPadding));
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    width: var(--width);
-    left: var(--center);
-
-    background-color: var(--second-color);
-    color: var(--second-text-color);
-
-    padding: 20px;
-    box-shadow: 2px 2px 3px 0 var(--shadow-color);
-    box-sizing: border-box;
+    padding: 1em 0;
 }
-.contactCV h3
+
+.contactCV h2
 {
-    margin-bottom: 15px;
+    font-size: 2.2em;
+    text-align: center;
+    padding-bottom: 1em;
 }
+
 .contactCV .buttons
 {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 60%;
+    flex-wrap: wrap;
 }
+
 .contactCV .buttons a
 {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid #000;
-    box-shadow: 2px 2px 4px 1px var(--shadow-color);
-    text-align: center;
-}
-.contactCV .buttons a:hover
-{
-    background-color: var(--first-color);
-    color: var(--first-text-color);
-    border-color: var(--helping-color);
-    box-shadow: 2px 2px 4px 1px var(--helping-color);
+    border: solid 2px white;
+    padding: 1em;
 }
 
-@media only screen and (max-width: 515px)
-{
-    :root
-    {
-        --width: 95vw;
-        --center: calc((100vw - var(--width))/2);
-    }
-    header.bodyheader
-    {
-        padding-top: 0;
-    }
-    /************** Navigation Bar ***************/
-    .header-nav
-    {
-        position: static;
-        margin-bottom: 3rem;
-    }
-    .header-nav ul
-    {
-        flex-wrap: unset;
-    }
-    .header-nav li.page
-    {
-        display: none;
-        flex: 0;
-    }
-    .header-nav li.icon
-    {
-        flex: 1;
-    }
-    /************** Banner *********************/
-    .header-banner
-    {
-        top: 5rem;
-        flex-direction: column;
-    }
-    .header-banner .text
-    {
-        padding-bottom: 20px;
-    }
-    /*************** Aside *******************/
-    .contactCV
-    {
+/********* Main **********/
 
-    }
-}
-@media only screen and (max-width: 580px)
+.container
 {
-    .header-nav
-    {
-        font-size: 1rem;
-    }
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-gap: 30px;
 }
-@media only screen and (min-width: 1000px)
+
+.container section
 {
-    :root
-    {
-        --width: 80vw;
-        --center: calc((100vw - var(--width))/2);
-    }
-    .header-banner
-    {
-        border-radius: 5px;
-    }
-    ul.nav
-    {
-        width: var(--width);
-        left: var(--center);
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+.elementTitle
+{
+    font-size: 2.2em;
+    padding-bottom: 0.2em;
+}
+
+.elementContainer
+{
+    padding: 30px 8vw;
+    width: 100%;
+    box-shadow: 1px
+}
+
+.elementContainer ul
+{
+    list-style: none;
+}
+
+/******** About me *********/
+
+.aboutMe .elementContainer
+{
+    display: flex;
+}
+
+.aboutMe .personalData
+{
+    flex: 1;
+}
+
+.aboutMe li
+{
+    line-height: 1.5;
+    padding: 0.2em 30px 0.2em 0;
+}
+
+.aboutMe .text
+{
+    word-wrap: break-word;
+    text-align: justify;
+    text-align-last: center;
+    padding: 0.2em 0 0 30px;
+    border-left: 1px var(--fifthColor) solid;
+    flex: 1;
+}
+
+.aboutMe span
+{
+    display: inline-block;
+    padding-left: 0.4em;
+    font-weight: 700;
+    color: var(--secondTextColor);
+}
+
+/******** Gallery *************/
+
+.portfolio .elementContainer
+{
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    justify-items: center;
+    justify-content: space-between;
+    padding: 30px 10px;
+    background: 0;
+    box-shadow: none;
+}
+
+.portfolio .elementContainer figure
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.portfolio figcaption
+{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+}
+
+.portfolio img
+{
+    width: 100%;
+    margin-bottom: -4px;
+}
+
+.portfolio figcaption a
+{
+    font-size: 0.8em;
+    margin-bottom: 1.5em;
+    color: var(--secondTextColor);
+}
+
+
+
+
