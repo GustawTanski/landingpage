@@ -92,6 +92,10 @@ body a
     text-align: center;
     font-weight: 700;
 }
+.headerNav li.special
+{
+    min-width: 67px;
+}
 
 .headerBanner
 {
@@ -369,9 +373,10 @@ body a
     outline: none;
     border: none;
     border-bottom: 1px solid var(--secondTextColor);
-    word-wrap: normal;
+    word-wrap: break-word;
     overflow: auto;
     resize: none;
+    width: 100%;
 }
 .contact .buttons
 {
@@ -403,3 +408,121 @@ body a
     text-align: center;
     margin-top: 40px;
 }
+
+@media only screen and (max-width: 900px)
+{
+    .aboutMe .elementContainer
+    {
+        flex-direction: column;
+    }
+
+    .aboutMe li
+    {
+        padding: 0.2em 0;
+    }
+
+    .aboutMe .text
+    {
+        border: none;
+        border-top: 1px var(--fifthColor) solid;
+        padding: 15px 0 0;
+    }
+
+    .contact .info > * 
+    {
+        margin-right: 5vw;
+    }
+
+}
+
+@media only screen and (max-width: 770px)
+{
+    .headerBanner img
+    {
+        transform: translateX(calc(0vw - var(--imgShift) * 0.5));
+    }
+    .portfolio .elementContainer
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 600px)
+{
+    .headerNav ul
+    {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .headerNav li
+    {
+        flex: 1;
+    }
+    .headerBanner
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .headerBanner h1
+    {
+        margin-top: 5vh;
+    }
+
+    .headerBanner p
+    {
+        word-wrap: break-word;
+        width: 100%;
+        text-align: justify;
+    }
+
+    .headerBanner img
+    {
+        order: -1;
+        position: static;
+        transform: translateX(0);
+    }
+
+    .contactCV .buttons
+    {
+        width: 100%;
+    }    
+
+    .portfolio .elementContainer
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .contact
+    {
+        flex-direction: column;
+    }
+
+    .contact .empty
+    {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px)
+{
+    .contactCV h2
+    {
+        padding: 0 1em 1em;
+    }
+
+    .contactCV .buttons
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contactCV .buttons a
+    {
+        padding: 1em;
+        margin-bottom: 10px;
+    }
+}
+
