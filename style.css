@@ -1,22 +1,10 @@
-/* :root
-{
-    --firstColor: #d2d7d8;
-    --secondColor: #101d3d;
-    --thirdColor: #081525;
-    --fourthColor: #E74C3C;
-    --fifthColor: #202D3F;
-    --firstTextColor: #fff;
-    --secondTextColor: #4169E1;
-    --thirdTextColor: #c0392b;
-    --bodyPadding: 10vw;
-    --imgShift: 20vw;
-} */
 
 *
 {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body
@@ -34,36 +22,50 @@ body a
     color: inherit;
     text-decoration: unset;
 }
-/* div
+
+p, span, h1, h2, h3, h4,  li
 {
-    border: 1px red solid;
-    box-sizing: border-box;
-} */
+    cursor: default;
+}
 
 /******Header*********/
 
 .bodyHeader
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;   
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;   
     position: relative;
     padding-bottom: 100px;
+    min-height: 100vh;
 }
+
+
 .bodyHeader .backgrounder
 {
+    left: -1px;
     position: absolute;
-    transform: translateX(calc(0vw - var(--bodyPadding)));
+    -webkit-transform: translateX(calc(0vw - var(--bodyPadding)));
+        -ms-transform: translateX(calc(0vw - var(--bodyPadding)));
+            transform: translateX(calc(0vw - var(--bodyPadding)));
     height: 100%;
     width: calc(100% + 2*var(--bodyPadding));
-    background-image: url(https://picsum.photos/1080/720/?image=800);
+    background-image: url(https://picsum.photos/1920/1080/?image=50);
     background-size: cover;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     z-index: -1;
 }
 .bodyHeader .backgrounder .first
 {
-    background-color: var(--fifthColor);
+    background-color: var(--sixthColor);
     opacity: 0.8;
     width: calc(100vw - 2*var(--bodyPadding) - var(--imgShift));
     
@@ -84,8 +86,13 @@ body a
     line-height: 1.2;
     font-size: 1.6em;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 30px;
 }
 
@@ -95,9 +102,12 @@ body a
     opacity: 0.3;
     display: inline-block;
     font-weight: 700;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
 }
 
 .l1, .l7
@@ -109,105 +119,132 @@ body a
 
 .l2, .l5, .l8, .l11
 {
-    transform: translateX(5vw);
+    -webkit-transform: translateX(5vw);
+        -ms-transform: translateX(5vw);
+            transform: translateX(5vw);
 }
 
 .l3, .l6, .l9, .l12
 {
-    transform: translateX(10vw);
+    -webkit-transform: translateX(10vw);
+        -ms-transform: translateX(10vw);
+            transform: translateX(10vw);
 }
 
 .l1, .l8, .l5
 {
-    animation-name: shiftTop;
+    -webkit-animation-name: shiftTop;
+            animation-name: shiftTop;
 }
 
 .l3, .l12, .l4
 {
-    animation-name: shiftLeft;
+    -webkit-animation-name: shiftLeft;
+            animation-name: shiftLeft;
 }
 
 .l2, .l9, .l11
 {
-    animation-name: shiftRight;
+    -webkit-animation-name: shiftRight;
+            animation-name: shiftRight;
 }
 
 .l6, .l7, .l10
 {
-    animation-name: shiftBottom;
+    -webkit-animation-name: shiftBottom;
+            animation-name: shiftBottom;
 }
 
 
 .headerNav ul
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     list-style: none;
     width: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 2em 0;
 }
 
 .l1
 {
-    animation-delay: 0.1s;
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
 }
 
 .l2
 {
-    animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
 }
 
 .l3
 {
-    animation-delay: -0.1s;
+    -webkit-animation-delay: -0.1s;
+            animation-delay: -0.1s;
 }
 
 .l5
 {
-    animation-delay: 0.15s;
+    -webkit-animation-delay: 0.15s;
+            animation-delay: 0.15s;
 }
 
 .l6
 {
-    animation-delay: 0.25s;
+    -webkit-animation-delay: 0.25s;
+            animation-delay: 0.25s;
 }
 
 .l7
 {
-    animation-delay: 0.125s;
+    -webkit-animation-delay: 0.125s;
+            animation-delay: 0.125s;
 }
 
 .l8
 {
-    animation-delay: -0.1s;
+    -webkit-animation-delay: -0.1s;
+            animation-delay: -0.1s;
 }
 
 .l9
 {
-    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
 }
 
 .l10
 {
-    animation-delay: 0.05s;
+    -webkit-animation-delay: 0.05s;
+            animation-delay: 0.05s;
 }
 
 .l11
 {
-    animation-delay: -0.05s;
+    -webkit-animation-delay: -0.05s;
+            animation-delay: -0.05s;
 }
 
 .l12
 {
-    animation-delay: -0.125s;
+    -webkit-animation-delay: -0.125s;
+            animation-delay: -0.125s;
 }
 
 .headerNav li
 {
     margin: auto 10px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     text-align: center;
     font-weight: 700;
     position: relative;
@@ -215,6 +252,10 @@ body a
 .headerNav li.special
 {
     min-width: 80px;
+}
+.headerNav li.burger
+{
+    display: none;
 }
 .headerNav li a
 {
@@ -230,7 +271,9 @@ body a
     position: absolute;
     bottom: 0;
     left: 0;
-    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+         -o-transition-duration: 0.5s;
+            transition-duration: 0.5s;
 }
 
 
@@ -241,28 +284,47 @@ body a
 
 .headerBanner
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 10vh 0;
 }
 
 .headerBanner div.text
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 .headerBanner h1
 {
     font-size: 5em;
     margin-bottom: 4.5vh;
-    animation-name: flowTop;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
+    -webkit-animation-name: flowTop;
+            animation-name: flowTop;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
     position: relative;
     height: 97px;
+    text-shadow: 4px 4px 3px rgba(0,0,0,0.5);
+
 }
 
 .headerBanner p
@@ -281,24 +343,34 @@ body a
     top: 161.5px;
     right: 0;
     position: absolute;
-    transform: translateX(calc(3vw - var(--imgShift)));
+    -webkit-transform: translateX(calc(3vw - var(--imgShift)));
+        -ms-transform: translateX(calc(3vw - var(--imgShift)));
+            transform: translateX(calc(3vw - var(--imgShift)));
     //border-radius: 50%;
 }
 
 /********* CVAside **************/
-.contactCV, .portfolio figcaption, .elementContainer, .portfolio img, .contact
+.contactCV, .portfolio figcaption, .elementContainer, .contact
 {
     background-color: var(--secondColor);
-    box-shadow: 4px 4px 3px 0 rgba(0,0,0,0.5);
+    -webkit-box-shadow: 4px 4px 3px 0 rgba(0,0,0,0.5);
+            box-shadow: 4px 4px 3px 0 rgba(0,0,0,0.5);
 }
 
 
 .contactCV
 {
-    margin: 30px calc(0vw - var(--bodyPadding));
+    margin: 0 calc(0vw - var(--bodyPadding)) 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 1em 0;
 }
 
@@ -311,26 +383,35 @@ body a
 
 .contactCV .buttons
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     width: 50%;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .contactCV .buttons a
 {
     border: solid 2px white;
     padding: 1em;
-    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+         -o-transition-duration: 1s;
+            transition-duration: 1s;
 }
 .contactCV .buttons a:hover
 {
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 /********* Main **********/
 
 .container
 {
+    display: -ms-grid;
     display: grid;
     grid-auto-columns: 1fr;
     grid-gap: 30px;
@@ -338,9 +419,16 @@ body a
 
 .container section
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .elementTitle
 {
@@ -349,6 +437,7 @@ body a
     font-size: 2.4em;
     padding-bottom: 0.2em;
     font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 
@@ -368,19 +457,25 @@ body a
 
 .aboutMe .elementContainer
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .aboutMe .personalData
 {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 
 .aboutMe li
 {
     line-height: 1.5;
     padding: 0.2em 30px 0.2em 0;
+    text-align: center;
 }
+
 
 .aboutMe .text
 {
@@ -389,7 +484,9 @@ body a
     text-align-last: center;
     padding: 0.2em 0 0 30px;
     border-left: 1px var(--fifthColor) solid;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 
 .aboutMe span
@@ -402,32 +499,52 @@ body a
 /************* Skills *******************/
 .skills .elementContainer
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 
 .skills .hardSkills, .skills .softSkills
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .skills h4
 {
-    text-align: center;
+    /* text-align: center; */
+    padding-left: 1em;
+    padding-right: 1em;
     font-size: 1.5em;
 }
 
 .skills ul
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 20px;
 }
 .skills li
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 10px 0;
 }
 
@@ -457,6 +574,11 @@ body a
     z-index: 0;
     border-radius: 3px;
     top:-1px;
+}
+
+.skills .softSkills
+{
+    border-left: 1px var(--fifthColor) solid;
 }
 
 
@@ -538,47 +660,71 @@ body a
 .portfolio .elementContainer
 {
     font-size: 14px;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 20px;
     grid-column-gap: 20px;
     justify-items: center;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-right: 10px;
     padding-left: 10px;
     padding-top: 0;
     background: 0;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
 
 .portfolio .elementContainer figure
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .portfolio figcaption
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 10px 15px;
 }
-.portfolio a
+
+.portfolio .imgDiv
 {
-    display: block;
+    -webkit-box-shadow: 4px 4px 3px 0 rgba(0,0,0,0.5);
+            box-shadow: 4px 4px 3px 0 rgba(0,0,0,0.5);
     overflow: hidden;
 }
+
 .portfolio img
 {
     width: 100%;
-    margin-bottom: -4px;
-    transition-duration: 1s;
+    margin-bottom: -5px;
+    -webkit-transition-duration: 1s;
+         -o-transition-duration: 1s;
+            transition-duration: 1s;
 }
 
 .portfolio img:hover
 {
-    transform: rotate(10deg) scale(1.2);
+    -webkit-transform: rotate(10deg) scale(1.25);
+        -ms-transform: rotate(10deg) scale(1.25);
+            transform: rotate(10deg) scale(1.25);
 }
 
 .portfolio figcaption a
@@ -591,16 +737,28 @@ body a
 /*************************** Kontakt ************************************/
 .contact
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .contact .info
 {
-    flex: 3;
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     background-color: var(--fourthColor);
+    padding-left: 15px;
 }
 
 .contact .info > * 
@@ -628,9 +786,14 @@ body a
 .contact ul.icons 
 {
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .contact .icons a
@@ -639,13 +802,17 @@ body a
     height: 30px;
     display: block;
     margin: 4.5px;
-    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+         -o-transition-duration: 1s;
+            transition-duration: 1s;
     position: relative;
 }
 
 .contact .icons a:hover
 {
-    transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotateZ(360deg);
 }
 
 .contact .icons img
@@ -655,12 +822,21 @@ body a
     display: block;
 }
 
-.contact .form
+.contact div.form
 {
-    flex: 4;
+    -webkit-box-flex: 4;
+        -ms-flex: 4;
+            flex: 4;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     padding: 40px 8vw;
     background-color: var(--secondColor);
 }
@@ -668,10 +844,19 @@ body a
 .contact form
 {
     padding: 2em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
+.contact form > *
+{
+    margin: 3px 0;
+}
 .contact .form form > input
 {
     background-color: inherit;
@@ -699,8 +884,12 @@ body a
 }
 .contact .buttons
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
 }
 
 .contact .buttons input
@@ -713,13 +902,19 @@ body a
     margin: 0 5%;
     outline: none;
     border: 2px var(--secondTextColor) solid;
-    flex: 1;
-    transition-duration: 1s;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-transition-duration: 1s;
+         -o-transition-duration: 1s;
+            transition-duration: 1s;
 }
 
 .contact .buttons input:hover
 {
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 .bodyFooter
@@ -743,7 +938,10 @@ body a
 {
     .aboutMe .elementContainer
     {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
 
@@ -757,6 +955,16 @@ body a
         border: none;
         border-top: 1px var(--fifthColor) solid;
         padding: 15px 0 0;
+    }
+
+    .breaker
+    {
+        display: none; 
+    }
+
+    .aboutMe ul li
+    {
+        text-align: left;
     }
 
     .contact .info > * 
@@ -775,8 +983,10 @@ body a
     .backText
     {
         height: 180px;
-        flex-wrap: wrap;
-        align-content: space-between;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -ms-flex-line-pack: justify;
+            align-content: space-between;
         width: 28vw;
         top: 415px;
         left: 38vw;
@@ -789,7 +999,9 @@ body a
 
     .headerBanner img
     {
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
         width: 30vw;
         height: 30vw;
     }
@@ -804,10 +1016,20 @@ body a
         width: 70%;
     }
 
+    .contactCV .buttons a
+    {
+        margin-top: 1em;
+    }
+
     .skills .elementContainer
     {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .skills li div
@@ -815,8 +1037,20 @@ body a
         width: 40vw;
     }
 
+    .skills .softSkills
+    {
+        border: none;
+        border-top: 1px var(--fifthColor) solid;
+    }
+
+    .skills .softSkills h4
+    {
+        padding-top: 0.5em;
+    }
+
     .portfolio .elementContainer
     {
+        -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -827,7 +1061,9 @@ body a
 
     .contact .icons
     {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         padding-left: 6vw;
         padding-right: 6vw;
     }
@@ -835,16 +1071,6 @@ body a
     /* .contact .icons a
     {
         margin: 3px 15px;
-    } */
-}
-
-@media only screen and (max-width: 700px)
-{
-    /* .contact .icons
-    {
-        justify-content: center;
-        padding-left: 6vw;
-        padding-right: 6vw;
     } */
 }
 
@@ -859,40 +1085,64 @@ body a
     {
         padding-bottom: 0px;
     }
+    .bodyHeader .backgrounder .first
+    {
+        width: 100vw;
+    }
+    .bodyHeader .backgrounder .second
+    {
+        display: none;
+    }
+
 
     .backText
     {
         height: 100px;
-        flex-wrap: wrap;
-        align-content: space-between;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -ms-flex-line-pack: justify;
+            align-content: space-between;
         width: 80%;
         top: 0;
         left: -5vw;
         position: relative;
-        order: 1;
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
         margin: 30px 0;
     }
 
     .headerNav ul
     {
-        justify-content: space-between;
-        flex-wrap: wrap;
+        justify-content: flex-end;
     }
     .headerNav li
     {
-        flex: 1;
+        display: none;
+    }
+    .headerNav li.burger
+    {
+        display: block;
+        font-size: 1.2em;
     }
     .headerBanner
     {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         padding: 0;
     }
 
     .headerBanner h1
     {
-        margin-top: 5vh;
+        margin-top: 0;
     }
 
     .headerBanner p
@@ -904,10 +1154,16 @@ body a
 
     .headerBanner img
     {
-        order: 2;
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
         position: static;
-        transform: translateX(0);
-        transform: translateY(0);
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
+        -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+                transform: translateY(0);
         width: 100vw;
         height: 100vw;
     }
@@ -924,12 +1180,16 @@ body a
 
     .portfolio .elementContainer
     {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
 
     .contact
     {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .contact .empty
@@ -938,6 +1198,18 @@ body a
     }
 }
 
+@media only screen and (max-width: 520px)
+{
+    .aboutMe ul li
+    {
+        text-align: center;
+    }
+
+    .aboutMe .breaker
+    {
+        display: inline;
+    }
+}
 @media only screen and (max-width: 450px)
 {
     .contactCV h2
@@ -947,8 +1219,13 @@ body a
     }
     .contactCV .buttons
     {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
 
@@ -959,4 +1236,3 @@ body a
     }
 
 }
-

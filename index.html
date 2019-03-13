@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gustaw Tański</title>
+    <title>Gustaw Tański - strona wizytówka</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="variables.css">
     <link rel="stylesheet" href="keyframes.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
-<body>
+<body onselectstart="window.event.returnValue=false;">
     
     <header class="bodyHeader">
         <div class="backgrounder">
@@ -23,6 +40,7 @@
                 <li class="special"><a href="#aboutMe">O mnie</a></li>
                 <li ><a href="#portfolio">Portfolio</a></li>
                 <li ><a href="#contact">Kontakt</a></li>
+                <li class="burger"><a href="#"> ☰</a></li>
             </ul>
         </nav>
         <div class="headerBanner">
@@ -45,7 +63,7 @@
                         Cześć!
                 </h1>
                 <p>
-                <span class="fline"> Nazywam się <strong>Gustaw Tański</strong></span> <br>
+                <span> Nazywam się <strong>Gustaw Tański</strong></span> <br>
                         Jestem początkującym front-end developerem i freelancerem. Tworzę dobrze wyglądające, funkcjonalne i responsywne strony. Zapraszam do zapoznania się z moim portfolio.
                 </p>
             </div>
@@ -67,7 +85,7 @@
         </div>
     </aside>
     <main>
-        <f class="container">
+        <div class="container">
             <section class="aboutMe" id="aboutMe">
                 <h2 class="elementTitle">
                     O mnie
@@ -75,11 +93,11 @@
                 <div class="elementContainer">
                     <div class="personalData">
                         <ul>
-                            <li>Imię i naziwsko: <span>Gustaw Tański</span></li>
-                            <li>Wiek: <span>21 lat</span></li>
-                            <li>Praca: <span lang="en">front-end developer, freelancer</span></li>
-                            <li>Telefon: <span>+48 693xxxxxx</span></li>
-                            <li>E-mail: <span>tanski.gustaw@gmail.com</span></li>
+                            <li>Imię i naziwsko:  <br class="breaker"><span>Gustaw Tański</span></li>
+                            <li>Wiek: <br class="breaker"><span>21 lat</span></li>
+                            <li>Praca: <br class="breaker"><span lang="en">front-end developer, freelancer</span></li>
+                            <li>Telefon: <br class="breaker"><span>+48 693xxxxxx</span></li>
+                            <li>E-mail: <br class="breaker"><span>tanski.gustaw@gmail.com</span></li>
                         </ul>
                     </div>
                     <div class="text">
@@ -116,9 +134,11 @@
                 <h2 class="elementTitle">
                     Portfolio
                 </h2>
-                <fi class="elementContainer">
+                <div class="elementContainer">
                     <figure>
-                        <a href="#" target="_blank"><img src="https://picsum.photos/400/240/?random" alt="woof"></a>
+                        <div class="imgDiv">
+                            <a href="#" target="_blank"><img src="https://picsum.photos/720/480/?image=50" alt="woof"></a>
+                        </div>
                         <figcaption>
                             <h3>
                             Lorem, ipsum dolor
@@ -129,7 +149,9 @@
                         </figcaption>
                     </figure>
                     <figure>
-                        <a href="#" target="_blank"><img src="https://picsum.photos/400/500/?random" alt="woof"></a>
+                        <div class="imgDiv">
+                            <a href="#" target="_blank"><img src="https://picsum.photos/720/480/?image=57" alt="woof"></a>
+                        </div>
                         <figcaption>
                             <h3>
                             Lorem, ipsum dolor
@@ -140,7 +162,9 @@
                         </figcaption>
                     </figure>
                     <figure>
-                        <a href="#" target="_blank"><img src="https://picsum.photos/400/225/?random" alt="woof"></a>
+                        <div class="imgDiv">
+                            <a href="#" target="_blank"><img src="https://picsum.photos/720/480/?image=100" alt="woof"></a>
+                        </div>
                         <figcaption>
                             <h3>
                             Lorem, ipsum dolor
@@ -151,7 +175,9 @@
                         </figure>
                     </figure>
                     <figure>
-                        <a href="#" target="_blank"><img src="https://picsum.photos/500/200/?random" alt="woof"></a>
+                        <div class="imgDiv">
+                            <a href="#" target="_blank"><img src="https://picsum.photos/720/480/?image=69" alt="woof"></a>
+                        </div>
                         <figcaption>
                             <h3>
                             Lorem, ipsum dolor
@@ -162,7 +188,9 @@
                         </figcaption>
                     </figure>
                     <figure>
-                            <a href="#" target="_blank"><img src="https://picsum.photos/400/300/?random" alt="woof"></a>
+                        <div class="imgDiv">
+                            <a href="#" target="_blank"><img src="https://picsum.photos/720/480/?image=33" alt="woof"></a>
+                        </div>
                         <figcaption>
                             <h3>
                             Lorem, ipsum dolor
@@ -173,7 +201,9 @@
                         </figcaption>
                     </figure>
                     <figure>
-                        <a href="#" target="_blank"><img src="https://picsum.photos/401/225/?random" alt="woof"></a>
+                        <div class="imgDiv">
+                            <a href="#" target="_blank"><img src="https://picsum.photos/720/480/?image=22" alt="woof"></a>
+                        </div>
                         <figcaption>
                             <h3>
                             Lorem, ipsum dolor
