@@ -203,8 +203,8 @@ body a
 .contactCV .buttons
 {
     display: flex;
-    justify-content: space-evenly;
-    width: 60%;
+    justify-content: space-around;
+    width: 50%;
     flex-wrap: wrap;
 }
 
@@ -514,6 +514,11 @@ body a
         padding: 0 20px;
     }
 
+    .contactCV .buttons
+    {
+        width: 70%;
+    }
+
     .portfolio .elementContainer
     {
         grid-template-columns: repeat(2, 1fr);
@@ -586,7 +591,7 @@ body a
 
     .contactCV .buttons
     {
-        width: 100%;
+        width: 80%;
     }    
 
     .portfolio .elementContainer
@@ -605,7 +610,7 @@ body a
     }
 }
 
-@media only screen and (max-width: 400px)
+@media only screen and (max-width: 450px)
 {
     .contactCV h2
     {
