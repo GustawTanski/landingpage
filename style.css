@@ -1,14 +1,15 @@
 /* :root
 {
-    --secondColor: #000;
-    --firstColor: #030917;
+    --firstColor: #d2d7d8;
+    --secondColor: #101d3d;
     --thirdColor: #081525;
-    --fourthColor: #0E1E2E;
+    --fourthColor: #E74C3C;
     --fifthColor: #202D3F;
     --firstTextColor: #fff;
     --secondTextColor: #4169E1;
+    --thirdTextColor: #c0392b;
     --bodyPadding: 10vw;
-    --imgShift: 10vw;
+    --imgShift: 20vw;
 } */
 
 *
@@ -22,7 +23,7 @@ body
 {
    background-color: var(--firstColor);
    color: var(--firstTextColor);
-   font-family: Roboto, Helvetica, sans-serif;
+   font-family: Montserrat, Helvetica, sans-serif;
    padding: 0 var(--bodyPadding);
 }
 
@@ -72,6 +73,44 @@ body a
     width:  calc(2* var(--bodyPadding) + var(--imgShift));
 }
 
+.backText
+{
+    position: absolute;
+    left: 69vw;
+    top: 130.5px;
+    word-wrap: none;
+    line-height: 1.2;
+    font-size: 1.6em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.backLetter
+{
+    position: relative;
+    opacity: 0.2;
+    display: inline-block;
+}
+
+.l1, .l7
+{
+    font-weight: 700;
+    opacity: 0.4;
+}
+
+.l2, .l5, .l8, .l11
+{
+   transform: translateX(5vw);
+}
+
+.l3, .l6, .l9, .l12
+{
+    transform: translateX(10vw);
+}
+
+
 
 .headerNav ul
 {
@@ -94,7 +133,7 @@ body a
 }
 .headerNav li.special
 {
-    min-width: 67px;
+    min-width: 80px;
 }
 
 .headerBanner
@@ -120,16 +159,17 @@ body a
 .headerBanner p
 {
     word-wrap: break-word;
-    width: 50%;
+    width: 40%;
 }
 
 .headerBanner img
 {
+    display: block;
     min-width: 150px;       //być do zmiany
-    max-width: 25vw;
+    width: 25vw;
     min-height: 150px;
-    max-height: 25vw;
-    top: unset;
+    height: 25vw;
+    top: 161.5px;
     right: 0;
     position: absolute;
     transform: translateX(calc(3vw - var(--imgShift)));
@@ -137,7 +177,7 @@ body a
 }
 
 /********* CVAside **************/
-.contactCV, .portfolio figcaption, .elementContainer
+.contactCV, .portfolio figcaption, .elementContainer, .portfolio img, .contact
 {
     background-color: var(--secondColor);
     box-shadow: 4px 4px 3px 0 rgba(0,0,0,0.5);
@@ -191,16 +231,19 @@ body a
 }
 .elementTitle
 {
-    color: var(--fourthColor);
-    font-size: 2.2em;
+    color: var(--thirdTextColor);
+    /* text-transform: uppercase; */
+    font-size: 2.4em;
     padding-bottom: 0.2em;
+    font-weight: 700;
 }
+
+
 
 .elementContainer
 {
     padding: 30px 8vw;
     width: 100%;
-    box-shadow: 1px
 }
 
 .elementContainer ul
@@ -418,6 +461,7 @@ body a
         flex-direction: column;
     }
 
+
     .aboutMe li
     {
         padding: 0.2em 0;
@@ -437,12 +481,39 @@ body a
 
 }
 
-@media only screen and (max-width: 770px)
+@media only screen and (max-width: 800px)
 {
+    .bodyHeader
+    {
+        padding-bottom: 6.5vw;
+    }
+    .backText
+    {
+        height: 180px;
+        flex-wrap: wrap;
+        align-content: space-between;
+        width: 28vw;
+        top: 415px;
+        left: 38vw;
+    }
+
+    .backText br
+    {
+        display: none;
+    }
+
     .headerBanner img
     {
-        transform: translateX(calc(0vw - var(--imgShift) * 0.5));
+        transform: translateX(0);
+        width: 30vw;
+        height: 30vw;
     }
+
+    .contactCV h2
+    {
+        padding: 0 20px;
+    }
+
     .portfolio .elementContainer
     {
         grid-template-columns: repeat(2, 1fr);
@@ -451,6 +522,29 @@ body a
 
 @media only screen and (max-width: 600px)
 {
+    :root
+    {
+        --bodyPadding: 5vw;
+    }
+
+    .bodyHeader
+    {
+        padding-bottom: 0px;
+    }
+
+    .backText
+    {
+        height: 90px;
+        flex-wrap: wrap;
+        align-content: space-between;
+        width: 80%;
+        top: 0;
+        left: -5vw;
+        position: relative;
+        order: 1;
+        margin: 30px 0;
+    }
+
     .headerNav ul
     {
         justify-content: space-between;
@@ -482,9 +576,12 @@ body a
 
     .headerBanner img
     {
-        order: -1;
+        order: 2;
         position: static;
         transform: translateX(0);
+        transform: translateY(0);
+        width: 100vw;
+        height: 100vw;
     }
 
     .contactCV .buttons
