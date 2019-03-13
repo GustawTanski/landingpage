@@ -1,0 +1,939 @@
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    overflow-x: hidden; 
+    background-color: var(--firstColor);
+    color: var(--firstTextColor);
+    font-family: Montserrat, Helvetica, sans-serif;
+    padding: 0 var(--bodyPadding);
+    max-width: 100vw;
+}
+
+body a
+{
+    color: inherit;
+    text-decoration: unset;
+}
+
+p, span, h1, h2, h3, h4,  li
+{
+    cursor: default;
+}
+
+/******Header*********/
+
+.bodyHeader
+{
+    display: flex;
+    flex-direction: column;   
+    position: relative;
+    padding-bottom: 100px;
+}
+.bodyHeader .backgrounder
+{
+    position: absolute;
+    transform: translateX(calc(0vw - var(--bodyPadding)));
+    height: 100%;
+    width: calc(100% + 2*var(--bodyPadding));
+    background-image: url(https://picsum.photos/1080/720/?image=800);
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    z-index: -1;
+}
+.bodyHeader .backgrounder .first
+{
+    background-color: var(--fifthColor);
+    opacity: 0.8;
+    width: calc(100vw - 2*var(--bodyPadding) - var(--imgShift));
+    
+}
+.bodyHeader .backgrounder .second
+{
+    background-color: var(--fourthColor);
+    opacity: 0.8;
+    width:  calc(2* var(--bodyPadding) + var(--imgShift));
+}
+
+.backText
+{
+    position: absolute;
+    left: 69vw;
+    top: 130.5px;
+    word-wrap: none;
+    line-height: 1.2;
+    font-size: 1.6em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+}
+
+.backLetter
+{
+    position: relative;
+    opacity: 0.3;
+    display: inline-block;
+    font-weight: 700;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.l1, .l7
+{
+    
+    opacity: 0.7;
+    
+}
+
+.l2, .l5, .l8, .l11
+{
+    transform: translateX(5vw);
+}
+
+.l3, .l6, .l9, .l12
+{
+    transform: translateX(10vw);
+}
+
+.l1, .l8, .l5
+{
+    animation-name: shiftTop;
+}
+
+.l3, .l12, .l4
+{
+    animation-name: shiftLeft;
+}
+
+.l2, .l9, .l11
+{
+    animation-name: shiftRight;
+}
+
+.l6, .l7, .l10
+{
+    animation-name: shiftBottom;
+}
+
+
+.headerNav ul
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2em 0;
+}
+
+.l1
+{
+    animation-delay: 0.1s;
+}
+
+.l2
+{
+    animation-delay: 0.2s;
+}
+
+.l3
+{
+    animation-delay: -0.1s;
+}
+
+.l5
+{
+    animation-delay: 0.15s;
+}
+
+.l6
+{
+    animation-delay: 0.25s;
+}
+
+.l7
+{
+    animation-delay: 0.125s;
+}
+
+.l8
+{
+    animation-delay: -0.1s;
+}
+
+.l9
+{
+    animation-delay: 0.3s;
+}
+
+.l10
+{
+    animation-delay: 0.05s;
+}
+
+.l11
+{
+    animation-delay: -0.05s;
+}
+
+.l12
+{
+    animation-delay: -0.125s;
+}
+
+.headerNav li
+{
+    margin: auto 10px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+}
+.headerNav li.special
+{
+    min-width: 80px;
+}
+.headerNav li a
+{
+    display: block;
+    padding: 0.5em;
+}
+.headerNav li::before
+{
+    content: "";
+    height: 1px;
+    width: 0%;
+    background-color: var(--secondTextColor);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition-duration: 0.5s;
+}
+
+
+.headerNav li:hover::before
+{
+    width: 100%;
+}
+
+.headerBanner
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10vh 0;
+}
+
+.headerBanner div.text
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.headerBanner h1
+{
+    font-size: 5em;
+    margin-bottom: 4.5vh;
+    animation-name: flowTop;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    position: relative;
+    height: 97px;
+}
+
+.headerBanner p
+{
+    word-wrap: break-word;
+    width: 40%;
+}
+
+.headerBanner img
+{
+    display: block;
+    min-width: 150px;       //być do zmiany
+    width: 25vw;
+    min-height: 150px;
+    height: 25vw;
+    top: 161.5px;
+    right: 0;
+    position: absolute;
+    transform: translateX(calc(3vw - var(--imgShift)));
+    //border-radius: 50%;
+}
+
+/********* CVAside **************/
+.contactCV, .portfolio figcaption, .elementContainer, .portfolio img, .contact
+{
+    background-color: var(--secondColor);
+    box-shadow: 4px 4px 3px 0 rgba(0,0,0,0.5);
+}
+
+
+.contactCV
+{
+    margin: 30px calc(0vw - var(--bodyPadding));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.contactCV h2
+{
+    font-size: 2.2em;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.contactCV .buttons
+{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.contactCV .buttons a
+{
+    border: solid 2px white;
+    padding: 1em;
+    transition-duration: 1s;
+}
+.contactCV .buttons a:hover
+{
+    transform: scale(1.1);
+}
+/********* Main **********/
+
+.container
+{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-gap: 30px;
+}
+
+.container section
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.elementTitle
+{
+    color: var(--thirdTextColor);
+    /* text-transform: uppercase; */
+    font-size: 2.4em;
+    padding-bottom: 0.2em;
+    font-weight: 700;
+}
+
+
+
+.elementContainer
+{
+    padding: 30px 8vw;
+    width: 100%;
+}
+
+.elementContainer ul
+{
+    list-style: none;
+}
+
+/******** About me *********/
+
+.aboutMe .elementContainer
+{
+    display: flex;
+}
+
+.aboutMe .personalData
+{
+    flex: 1;
+}
+
+.aboutMe li
+{
+    line-height: 1.5;
+    padding: 0.2em 30px 0.2em 0;
+}
+
+.aboutMe .text
+{
+    word-wrap: break-word;
+    text-align: justify;
+    text-align-last: center;
+    padding: 0.2em 0 0 30px;
+    border-left: 1px var(--fifthColor) solid;
+    flex: 1;
+}
+
+.aboutMe span
+{
+    display: inline-block;
+    padding-left: 0.4em;
+    font-weight: 700;
+    color: var(--secondTextColor);
+}
+/************* Skills *******************/
+.skills .elementContainer
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.skills .hardSkills, .skills .softSkills
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.skills h4
+{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.skills ul
+{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.skills li
+{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.skills li p
+{
+    padding-left: 4px;
+}
+
+.skills li div
+{
+    margin-top: 5px;
+    height: 10px;
+    width: 200px;
+    border: 1px solid var(--secondTextColor);
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+}
+
+.skills li div::before
+{
+    border-radius: 3px;
+    position: absolute;
+    height: 10px;
+    background-color: var(--secondTextColor);
+    content: "";
+    z-index: 0;
+    border-radius: 3px;
+    top:-1px;
+}
+
+
+.d1::before
+{
+    width: 60%;
+}
+
+.d2::before
+{
+    width: 75%;
+}
+
+.d3::before
+{
+    width: 20%;
+}
+
+.d4::before
+{
+    width: 95%;
+}
+
+.d5::before
+{
+    width: 40%;
+}
+
+.d6::before
+{
+    width: 15%;
+}
+
+.skills li div::after
+{
+    position: absolute;
+    background-color: var(--secondTextColor);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    content: "";
+    z-index: 2;
+    /* border: 1px solid #000; */
+    top: -6px;
+}
+
+.d1::after
+{
+    left: 58%;
+}
+.d2::after
+{
+    left: 73%;
+}
+
+.d3::after
+{
+    left: 18%;
+}
+
+.d4::after
+{
+    left: 93%;
+}
+
+.d5::after
+{
+    left: 38%;
+}
+
+.d6::after
+{
+    left: 13%;
+}
+
+
+/******** Gallery *************/
+
+.portfolio .elementContainer
+{
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    justify-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 0;
+    background: 0;
+    box-shadow: none;
+}
+
+.portfolio .elementContainer figure
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.portfolio figcaption
+{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+}
+.portfolio a
+{
+    display: block;
+    overflow: hidden;
+}
+.portfolio img
+{
+    width: 100%;
+    margin-bottom: -4px;
+    transition-duration: 1s;
+}
+
+.portfolio img:hover
+{
+    transform: rotate(10deg) scale(1.2);
+}
+
+.portfolio figcaption a
+{
+    font-size: 0.8em;
+    margin-bottom: 1.5em;
+    color: var(--secondTextColor);
+}
+
+/*************************** Kontakt ************************************/
+.contact
+{
+    display: flex;
+}
+
+.contact .info
+{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--fourthColor);
+}
+
+.contact .info > * 
+{
+    margin: 10px 8vw 10px 10px;
+}
+
+.contact .line
+{
+    width: 30%;
+    border-bottom: 1px #fff solid;
+    padding-top: 20px;
+}
+
+.contact p
+{
+    font-size: 0.9em;
+}
+
+.contact .empty
+{
+    height: 100px;
+}
+
+.contact ul.icons 
+{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .icons a
+{
+    width:  30px;
+    height: 30px;
+    display: block;
+    margin: 4.5px;
+    transition-duration: 1s;
+    position: relative;
+}
+
+.contact .icons a:hover
+{
+    transform: rotateZ(360deg);
+}
+
+.contact .icons img
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.contact .form
+{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 8vw;
+    background-color: var(--secondColor);
+}
+
+.contact form
+{
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .form form > input
+{
+    background-color: inherit;
+    color: inherit;
+    font-size: 1em;
+    line-height: 1.5;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--secondTextColor);
+}
+
+.contact .form textarea
+{
+    background-color: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--secondTextColor);
+    word-wrap: break-word;
+    overflow: auto;
+    resize: none;
+    width: 100%;
+}
+.contact .buttons
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact .buttons input
+{
+    background-color: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    padding: 8px;
+    margin: 0 5%;
+    outline: none;
+    border: 2px var(--secondTextColor) solid;
+    flex: 1;
+    transition-duration: 1s;
+}
+
+.contact .buttons input:hover
+{
+    transform: scale(1.1);
+}
+
+.bodyFooter
+{
+    width: calc(100% + 2*var(--bodyPadding));
+    margin-left: calc(0vw - var(--bodyPadding));
+    font-size: 0.7em;
+    line-height: 1.5;
+    padding: 8px;  
+    background-color: var(--secondColor);
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* @media only screen and (max-width: 1150px)
+{
+    
+} */
+
+@media only screen and (max-width: 900px)
+{
+    .aboutMe .elementContainer
+    {
+        flex-direction: column;
+    }
+
+
+    .aboutMe li
+    {
+        padding: 0.2em 0;
+    }
+
+    .aboutMe .text
+    {
+        border: none;
+        border-top: 1px var(--fifthColor) solid;
+        padding: 15px 0 0;
+    }
+
+    .contact .info > * 
+    {
+        margin-right: 5vw;
+    }
+
+}
+
+@media only screen and (max-width: 800px)
+{
+    .bodyHeader
+    {
+        padding-bottom: 14vw;
+    }
+    .backText
+    {
+        height: 180px;
+        flex-wrap: wrap;
+        align-content: space-between;
+        width: 28vw;
+        top: 415px;
+        left: 38vw;
+    }
+
+    .backText br
+    {
+        display: none;
+    }
+
+    .headerBanner img
+    {
+        transform: translateX(0);
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .contactCV h2
+    {
+        padding: 0 20px;
+    }
+
+    .contactCV .buttons
+    {
+        width: 70%;
+    }
+
+    .skills .elementContainer
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills li div
+    {
+        width: 40vw;
+    }
+
+    .portfolio .elementContainer
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact .empty
+    {
+        display: none;
+    }
+
+    .contact .icons
+    {
+        justify-content: center;
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    /* .contact .icons a
+    {
+        margin: 3px 15px;
+    } */
+}
+
+@media only screen and (max-width: 600px)
+{
+    :root
+    {
+        --bodyPadding: 5vw;
+    }
+
+    .bodyHeader
+    {
+        padding-bottom: 0px;
+    }
+
+    .backText
+    {
+        height: 100px;
+        flex-wrap: wrap;
+        align-content: space-between;
+        width: 80%;
+        top: 0;
+        left: -5vw;
+        position: relative;
+        order: 1;
+        margin: 30px 0;
+    }
+
+    .headerNav ul
+    {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .headerNav li
+    {
+        flex: 1;
+    }
+    .headerBanner
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .headerBanner h1
+    {
+        margin-top: 5vh;
+    }
+
+    .headerBanner p
+    {
+        word-wrap: break-word;
+        width: 100%;
+        text-align: justify;
+    }
+
+    .headerBanner img
+    {
+        order: 2;
+        position: static;
+        transform: translateX(0);
+        transform: translateY(0);
+        width: 100vw;
+        height: 100vw;
+    }
+
+    .contactCV .buttons
+    {
+        width: 80%;
+    }    
+
+    .skills li div
+    {
+        width: 60vw;
+    }
+
+    .portfolio .elementContainer
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .contact
+    {
+        flex-direction: column;
+    }
+
+    .contact .empty
+    {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 450px)
+{
+    .contactCV h2
+    {
+        padding: 0 1em 1em;
+        font-size: 1.6em;
+    }
+    .contactCV .buttons
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .contactCV .buttons a
+    {
+        padding: 1em;
+        margin-bottom: 10px;
+    }
+
+}
+

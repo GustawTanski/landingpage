@@ -1,13 +1,21 @@
 :root
 {
     --firstColor: #fff;
-    --secondColor: #101d3d;
+    --secondColor: #172a5a;
     --thirdColor: #081525;
     --fourthColor: #E74C3C;
-    --fifthColor: #202D3F;
+    --fifthColor: rgb(53, 75, 105);
+    --sixthColor: #202D3F;
     --firstTextColor: #fff;
-    --secondTextColor: #4169E1;
+    --secondTextColor: rgb(65, 180, 225);
     --thirdTextColor: rgb(177, 23, 6);
     --bodyPadding: 10vw;
     --imgShift: 15vw;
 }
+
+/* --secondTextColor: rgb(65, 180, 225);
+--secondColor: #172a5a; */
+
+/* --secondColor: #101d3d;
+--secondTextColor: #4169E1;
+--fifthColor: #202D3F; */
