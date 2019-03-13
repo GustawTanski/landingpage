@@ -21,10 +21,11 @@
 
 body
 {
-   background-color: var(--firstColor);
-   color: var(--firstTextColor);
-   font-family: Montserrat, Helvetica, sans-serif;
-   padding: 0 var(--bodyPadding);
+    overflow-x: hidden;
+    background-color: var(--firstColor);
+    color: var(--firstTextColor);
+    font-family: Montserrat, Helvetica, sans-serif;
+    padding: 0 var(--bodyPadding);
 }
 
 body a
@@ -145,6 +146,61 @@ body a
     width: 100%;
     box-sizing: border-box;
     padding: 2em 0;
+}
+
+.l1
+{
+    animation-delay: 0.1s;
+}
+
+.l2
+{
+    animation-delay: 0.2s;
+}
+
+.l3
+{
+    animation-delay: -0.1s;
+}
+
+.l5
+{
+    animation-delay: 0.15s;
+}
+
+.l6
+{
+    animation-delay: 0.25s;
+}
+
+.l7
+{
+    animation-delay: 0.125s;
+}
+
+.l8
+{
+    animation-delay: -0.1s;
+}
+
+.l9
+{
+    animation-delay: 0.3s;
+}
+
+.l10
+{
+    animation-delay: 0.05s;
+}
+
+.l11
+{
+    animation-delay: -0.05s;
+}
+
+.l12
+{
+    animation-delay: -0.125s;
 }
 
 .headerNav li
@@ -671,7 +727,7 @@ body a
     margin-left: calc(0vw - var(--bodyPadding));
     font-size: 0.7em;
     line-height: 1.5;
-    padding: 5px;  
+    padding: 8px;  
     background-color: var(--secondColor);
     text-align: center;
     margin-top: 40px;
@@ -750,15 +806,44 @@ body a
     .skills .elementContainer
     {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .skills li div
+    {
+        width: 40vw;
     }
 
     .portfolio .elementContainer
     {
         grid-template-columns: repeat(2, 1fr);
     }
-    .contact .icons a
+
+    .contact .empty
+    {
+        display: none;
+    }
+
+    .contact .icons
+    {
+        justify-content: center;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    /* .contact .icons a
     {
         margin: 3px 15px;
+    } */
+}
+
+@media only screen and (max-width: 700px)
+{
+    .contact .icons
+    {
+        justify-content: center;
+        padding-left: 2vw;
+        padding-right: 2vw;
     }
 }
 
@@ -865,5 +950,11 @@ body a
         padding: 1em;
         margin-bottom: 10px;
     }
-}
+
+    /* .headerBanner img
+    {
+        width: 95.5vw;
+        height: 95.5vw;
+    }
+} */
 
