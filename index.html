@@ -7,6 +7,7 @@
     <title>Gustaw Tański</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="keyframes.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,10 +19,10 @@
         </div>
         <nav class="headerNav">
             <ul>
-                <li ><a href="#">Umiejętności</a></li>
-                <li class="special"><a href="#">O mnie</a></li>
-                <li ><a href="#">Portfolio</a></li>
-                <li ><a href="#">Kontakt</a></li>
+                <li ><a href="#skills">Umiejętności</a></li>
+                <li class="special"><a href="#aboutMe">O mnie</a></li>
+                <li ><a href="#portfolio">Portfolio</a></li>
+                <li ><a href="#contact">Kontakt</a></li>
                 <!-- <li class="icon"><a href="#"><img src="" alt="git"></a></li>
                 <li class="icon"><a href="#"><img src="" alt="instagram"></a></li>
                 <li class="icon"><a href="#"><img src="" alt="facebook"></a></li> -->
@@ -70,7 +71,7 @@
     </aside>
     <main>
         <f class="container">
-            <section class="aboutMe">
+            <section class="aboutMe" id="aboutMe">
                 <h2 class="elementTitle">
                     O mnie
                 </h2>
@@ -91,28 +92,30 @@
                     </div>
                 </div>
             </section>
-            <section class="skills">
+            <section class="skills" id="skills">
                 <h2 class="elementTitle">
                     Umiejętności
                 </h2>
                 <div class="elementContainer">
                     <div class="hardSkills">
+                        <h4>Umiejętności webbowe</h4>
                         <ul>
-                            <li>Lorem, ipsum dolor</li>
-                            <li>Lorem, ipsum dolor</li>
-                            <li>Lorem, ipsum dolor</li>
+                            <li><p>html</p><div class="d1"></div></li>
+                            <li><p>css</p><div class="d2"></div></li>
+                            <li><p>js</p><div class="d3"></div></li>
                         </ul>
                     </div>
                     <div class="softSkills">
+                        <h4>Pozostałe umiejętności</h4>
                         <ul>
-                            <li>Lorem, ipsum dolor</li>
-                            <li>Lorem, ipsum dolor</li>
-                            <li>Lorem, ipsum dolor</li>
+                                <li><p>język angielski</p><div class="d4"></div></li>
+                                <li><p>C++</p><div class="d5"></div></li>
+                                <li><p>język francuski</p><div class="d6"></div></li>
                         </ul>
                     </div>
                 </div>
             </section>
-            <section class="portfolio">
+            <section class="portfolio" id="portfolio">
                 <h2 class="elementTitle">
                     Portfolio
                 </h2>
@@ -129,7 +132,7 @@
                             <p>
                                 Woofki miauki
                             </p>
-                        </figurec>
+                        </figcaption>
                     </figure>
                     <figure>
                         <a href="#" target="_blank"><img src="https://picsum.photos/400/500/?random" alt="woof"></a>
@@ -143,7 +146,7 @@
                             <p>
                                 Woofki miauki
                             </p>
-                        </figure>
+                        </figcaption>
                     </figure>
                     <figure>
                         <a href="#" target="_blank"><img src="https://picsum.photos/400/225/?random" alt="woof"></a>
@@ -171,7 +174,7 @@
                             <p>
                                 Woofki miauki
                             </p>
-                        </figure>
+                        </figcaption>
                     </figure>
                     <figure>
                             <a href="#" target="_blank"><img src="https://picsum.photos/400/300/?random" alt="woof"></a>
@@ -185,7 +188,7 @@
                             <p>
                                 Woofki miauki
                             </p>
-                        </figure>
+                        </figcaption>
                     </figure>
                     <figure>
                         <a href="#" target="_blank"><img src="https://picsum.photos/401/225/?random" alt="woof"></a>
@@ -205,7 +208,7 @@
             </section>
         </div>
     </main>
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="info">
             <div class="line"></div>
             <p>
@@ -218,11 +221,11 @@
                 Lorem ipsum dolor, sit amet consectetur 
             </p>
             <div class="empty"></div>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
+            <ul class="icons">
+                <li><a class="a1" href="http://" target="_blank"><img src="images/fb.png" alt="facebook"></a></li>
+                <li><a href="http://" target="_blank"><img src="images/git.png" alt="gitHub"></a></li>
+                <li><a href="http://" target="_blank"><img src="images/in.png" alt="linkedIn"></a></li>
+                <li><a href="http://" target="_blank"><img src="images/ig.png" alt="instagram"></a></li>
             </ul>
         </div>
         <div class="form">
