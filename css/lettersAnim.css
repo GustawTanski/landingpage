@@ -1,0 +1,104 @@
+
+.l2, .l5, .l8, .l11
+{
+    -webkit-transform: translateX(5vw);
+        -ms-transform: translateX(5vw);
+            transform: translateX(5vw);
+}
+
+.l3, .l6, .l9, .l12
+{
+    -webkit-transform: translateX(10vw);
+        -ms-transform: translateX(10vw);
+            transform: translateX(10vw);
+}
+
+.l1, .l8, .l5
+{
+    -webkit-animation-name: shiftTop;
+            animation-name: shiftTop;
+}
+
+.l3, .l12, .l4
+{
+    -webkit-animation-name: shiftLeft;
+            animation-name: shiftLeft;
+}
+
+.l2, .l9, .l11
+{
+    -webkit-animation-name: shiftRight;
+            animation-name: shiftRight;
+}
+
+.l6, .l7, .l10
+{
+    -webkit-animation-name: shiftBottom;
+            animation-name: shiftBottom;
+}
+
+.l1
+{
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+}
+
+.l2
+{
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+}
+
+.l3
+{
+    -webkit-animation-delay: -0.1s;
+            animation-delay: -0.1s;
+}
+
+.l5
+{
+    -webkit-animation-delay: 0.15s;
+            animation-delay: 0.15s;
+}
+
+.l6
+{
+    -webkit-animation-delay: 0.25s;
+            animation-delay: 0.25s;
+}
+
+.l7
+{
+    -webkit-animation-delay: 0.125s;
+            animation-delay: 0.125s;
+}
+
+.l8
+{
+    -webkit-animation-delay: -0.1s;
+            animation-delay: -0.1s;
+}
+
+.l9
+{
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+}
+
+.l10
+{
+    -webkit-animation-delay: 0.05s;
+            animation-delay: 0.05s;
+}
+
+.l11
+{
+    -webkit-animation-delay: -0.05s;
+            animation-delay: -0.05s;
+}
+
+.l12
+{
+    -webkit-animation-delay: -0.125s;
+            animation-delay: -0.125s;
+}

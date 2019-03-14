@@ -1,0 +1,186 @@
+.skills .elementContainer
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+
+.skills .hardSkills, .skills .softSkills
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.skills h4
+{
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 1.5em;
+}
+
+.skills ul
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+}
+.skills li
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px 0;
+}
+
+.skills li p
+{
+    padding-left: 4px;
+}
+
+.skills li div
+{
+    margin-top: 5px;
+    height: 10px;
+    width: 200px;
+    border: 1px solid var(--secondTextColor);
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+}
+
+.skills li div::before
+{
+    border-radius: 3px;
+    position: absolute;
+    height: 10px;
+    background-color: var(--secondTextColor);
+    content: "";
+    z-index: 0;
+    border-radius: 3px;
+    top:-1px;
+}
+
+.d1::before
+{
+    width: 60%;
+}
+
+.d2::before
+{
+    width: 75%;
+}
+
+.d3::before
+{
+    width: 20%;
+}
+
+.d4::before
+{
+    width: 95%;
+}
+
+.d5::before
+{
+    width: 40%;
+}
+
+.d6::before
+{
+    width: 15%;
+}
+
+.skills li div::after
+{
+    position: absolute;
+    background-color: var(--secondTextColor);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    content: "";
+    z-index: 2;
+    top: -6px;
+}
+
+.d1::after
+{
+    left: 58%;
+}
+.d2::after
+{
+    left: 73%;
+}
+
+.d3::after
+{
+    left: 18%;
+}
+
+.d4::after
+{
+    left: 93%;
+}
+
+.d5::after
+{
+    left: 38%;
+}
+
+.d6::after
+{
+    left: 13%;
+}
+
+@media only screen and (max-width: 800px)
+{
+    .skills .elementContainer
+    {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .skills li div
+    {
+        width: 40vw;
+    }
+
+    .skills .softSkills
+    {
+        border: none;
+        border-top: 1px var(--fifthColor) solid;
+    }
+
+    .skills .softSkills h4
+    {
+        padding-top: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 600px)
+{
+    .skills li div
+    {
+        width: 60vw;
+    }
+}

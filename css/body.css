@@ -1,0 +1,29 @@
+
+*
+{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body
+{
+    overflow-x: hidden; 
+    background-color: var(--firstColor);
+    color: var(--firstTextColor);
+    font-family: Montserrat, Helvetica, sans-serif;
+    padding: 0 var(--bodyPadding);
+    max-width: 100vw;
+}
+
+body a
+{
+    color: inherit;
+    text-decoration: unset;
+}
+
+p, span, h1, h2, h3, h4,  li
+{
+    cursor: default;
+}
