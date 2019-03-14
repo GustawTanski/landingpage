@@ -13,6 +13,13 @@
     --imgShift: 15vw;
 }
 
+@media only screen and (max-width: 600px)
+{
+    :root
+    {
+        --bodyPadding: 5vw;
+    }
+}
 /* --secondTextColor: rgb(65, 180, 225);
 --secondColor: #172a5a; */
 

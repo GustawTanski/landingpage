@@ -1,0 +1,11 @@
+.bodyFooter
+{
+    width: calc(100% + 2*var(--bodyPadding));
+    margin-left: calc(0vw - var(--bodyPadding));
+    font-size: 0.7em;
+    line-height: 1.5;
+    padding: 8px;  
+    background-color: var(--secondColor);
+    text-align: center;
+    margin-top: 40px;
+}

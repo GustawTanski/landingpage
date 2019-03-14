@@ -1,0 +1,97 @@
+.portfolio .elementContainer
+{
+    font-size: 14px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    justify-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 0;
+    background: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.portfolio .elementContainer figure
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.portfolio figcaption
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px 15px;
+    background-color: var(--secondColor);
+    -webkit-box-shadow: 4px 4px 3px 0 rgba(0,0,0,0.5);
+            box-shadow: 4px 4px 3px 0 rgba(0,0,0,0.5);
+}
+
+.portfolio .imgDiv
+{
+    -webkit-box-shadow: 4px 4px 3px 0 rgba(0,0,0,0.5);
+            box-shadow: 4px 4px 3px 0 rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+.portfolio img
+{
+    width: 100%;
+    margin-bottom: -5px;
+    -webkit-transition-duration: 1s;
+         -o-transition-duration: 1s;
+            transition-duration: 1s;
+}
+
+.portfolio img:hover
+{
+    -webkit-transform: rotate(10deg) scale(1.25);
+        -ms-transform: rotate(10deg) scale(1.25);
+            transform: rotate(10deg) scale(1.25);
+}
+
+.portfolio figcaption a
+{
+    font-size: 0.8em;
+    margin-bottom: 1.5em;
+    color: var(--secondTextColor);
+}
+
+@media only screen and (max-width: 800px)
+{
+    .portfolio .elementContainer
+    {
+        -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 600px)
+{
+    .portfolio .elementContainer
+    {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+}
